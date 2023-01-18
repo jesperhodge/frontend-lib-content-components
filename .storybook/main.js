@@ -1,4 +1,4 @@
-const projectWebpackConfig = require('../webpack.dev.config');
+const path = require('path');
 
 module.exports = {
   stories: [
@@ -16,6 +16,9 @@ module.exports = {
     builder: "@storybook/builder-webpack5"
   },
   webpackFinal: async (config) => {
-    return { ...config, module: { ...config.module, rules: projectWebpackConfig.module.rules } };
+    config.resolve.alias = {
+      '@edx/frontend-lib-content-components': path.resolve(__dirname, '..', 'src'),
+    };
+    return config;
   }
 }

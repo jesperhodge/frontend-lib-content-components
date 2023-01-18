@@ -1,4 +1,3 @@
-import { IntlProvider } from '@edx/frontend-platform/i18n';
 import React from 'react';
 
 import { RawEditor } from '.';
@@ -17,4 +16,4 @@ const props = {
   content: { data: { data: 'eDiTablE Text' } },
 };
 
-export const Default = () => <IntlProvider locale="en" messages={{}}><RawEditor {...props} /></IntlProvider>;
+export const Default = () => <RawEditor {...props} />;

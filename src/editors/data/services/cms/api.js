@@ -274,9 +274,10 @@ export const processLicense = (licenseType, licenseDetails) => {
 };
 
 export const checkMockApi = (key) => {
-  if (process.env.REACT_APP_DEVGALLERY) {
+  console.log('***** checkMockApi *****\n', process.env.REACT_APP_DEVGALLERY)
+  //if (process.env.REACT_APP_DEVGALLERY) {
     return mockApi[key];
-  }
+  //}
   return module.apiMethods[key];
 };
 
