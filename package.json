@@ -14,7 +14,7 @@
     "start": "fedx-scripts webpack-dev-server --progress",
     "test": "fedx-scripts jest --coverage",
     "addXblock": "node addXblock",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_ENV='development' NODE_PATH=./src REACT_APP_DEVGALLERY='true' start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "files": [
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/edx/frontend-lib-content-components#readme",
   "devDependencies": {
+    "@edx/brand": "npm:@edx/brand-edx.org@^2.0.3",
     "@babel/core": "^7.20.12",
     "@edx/frontend-build": "^11.0.2",
     "@edx/frontend-platform": "2.4.0",
