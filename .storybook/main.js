@@ -20,5 +20,18 @@ module.exports = {
       '@edx/frontend-lib-content-components': path.resolve(__dirname, '..', 'src'),
     };
     return config;
-  }
+  },
+  babel: async (options) => {
+    options.plugins.push([
+      "formatjs",
+      {
+        "idInterpolationPattern": "[sha512:contenthash:base64:6]"
+      }
+    ]);
+
+    return {
+      ...options,
+    
+    }
+  },
 }

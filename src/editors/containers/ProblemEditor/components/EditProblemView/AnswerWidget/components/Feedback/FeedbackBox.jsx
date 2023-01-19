@@ -7,12 +7,11 @@ import FeedbackControl from './FeedbackControl';
 import { messages } from './messages';
 
 export const FeedbackBox = ({
-  answer, setAnswer, intl,
+  answer, setAnswer,
 }) => {
   const props = {
     onChange: (e) => setAnswer({ selectedFeedback: e.target.value }),
     answer,
-    intl,
   };
 
   return (
@@ -40,4 +39,4 @@ FeedbackBox.propTypes = {
   intl: intlShape.isRequired,
 };
 
-export default injectIntl(FeedbackBox);
+export default FeedbackBox;
