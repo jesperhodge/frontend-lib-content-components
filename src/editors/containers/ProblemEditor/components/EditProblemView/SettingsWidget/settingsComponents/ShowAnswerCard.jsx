@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { injectIntl, FormattedMessage, intlShape } from '@edx/frontend-platform/i18n';
 import { Form, Hyperlink } from '@edx/paragon';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import { ShowAnswerTypes, ShowAnswerTypesKeys } from '../../../../../../data/constants/problem';
 import { selectors } from '../../../../../../data/redux';
 import messages from '../messages';
@@ -86,13 +86,13 @@ export const ShowAnswerCard = ({
   );
 
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.showAnswerSettingsTitle)}
       summary={intl.formatMessage(ShowAnswerTypes[showAnswer.on])}
       extraSections={[{ children: explanationSection }]}
     >
       {showAnswerSection}
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 

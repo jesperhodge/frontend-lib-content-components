@@ -2,7 +2,7 @@ import React from 'react';
 import { injectIntl, FormattedMessage, intlShape } from '@edx/frontend-platform/i18n';
 import { Form, MailtoLink } from '@edx/paragon';
 import PropTypes from 'prop-types';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import messages from '../messages';
 import { matlabCardHooks } from '../hooks';
 
@@ -15,7 +15,7 @@ export const MatlabCard = ({
   const { summary, handleChange } = matlabCardHooks(matLabApiKey, updateSettings);
 
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.matlabSettingTitle)}
       summary={summary.intl ? intl.formatMessage(summary.message, { ...summary.values }) : summary.message}
       none={!matLabApiKey}
@@ -40,7 +40,7 @@ export const MatlabCard = ({
           floatingLabel={intl.formatMessage(messages.matlabInputLabel)}
         />
       </Form.Group>
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 

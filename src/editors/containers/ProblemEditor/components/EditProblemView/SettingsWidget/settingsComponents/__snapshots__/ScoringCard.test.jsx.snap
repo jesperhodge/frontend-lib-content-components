@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScoringCard snapshot snapshot: scoring setting card 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   summary="{attempts, plural, =1 {# attempt} other {# attempts}} · {weight, plural, =0 {Ungraded} other {# points}}"
@@ -46,11 +46,11 @@ exports[`ScoringCard snapshot snapshot: scoring setting card 1`] = `
       />
     </Form.Control.Feedback>
   </Form.Group>
-</SettingsOption>
+</CollapsibleCard>
 `;
 
 exports[`ScoringCard snapshot snapshot: scoring setting card max attempts 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   summary="Unlimited attempts · {weight, plural, =0 {Ungraded} other {# points}}"
@@ -95,11 +95,11 @@ exports[`ScoringCard snapshot snapshot: scoring setting card max attempts 1`] = 
       />
     </Form.Control.Feedback>
   </Form.Group>
-</SettingsOption>
+</CollapsibleCard>
 `;
 
 exports[`ScoringCard snapshot snapshot: scoring setting card zero zero weight 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   summary="{attempts, plural, =1 {# attempt} other {# attempts}} · {weight, plural, =0 {Ungraded} other {# points}}"
@@ -144,5 +144,5 @@ exports[`ScoringCard snapshot snapshot: scoring setting card zero zero weight 1`
       />
     </Form.Control.Feedback>
   </Form.Group>
-</SettingsOption>
+</CollapsibleCard>
 `;

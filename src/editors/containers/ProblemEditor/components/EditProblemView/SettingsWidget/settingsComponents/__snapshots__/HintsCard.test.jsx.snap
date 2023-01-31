@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HintsCard snapshot snapshot: renders hints setting card multiple hints 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   none={false}
@@ -35,11 +35,11 @@ exports[`HintsCard snapshot snapshot: renders hints setting card multiple hints 
       id="authoring.problemeditor.settings.hint.addHintButton"
     />
   </Button>
-</SettingsOption>
+</CollapsibleCard>
 `;
 
 exports[`HintsCard snapshot snapshot: renders hints setting card no hints 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   none={true}
@@ -59,11 +59,11 @@ exports[`HintsCard snapshot snapshot: renders hints setting card no hints 1`] = 
       id="authoring.problemeditor.settings.hint.addHintButton"
     />
   </Button>
-</SettingsOption>
+</CollapsibleCard>
 `;
 
 exports[`HintsCard snapshot snapshot: renders hints setting card one hint 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   none={false}
@@ -90,5 +90,5 @@ exports[`HintsCard snapshot snapshot: renders hints setting card one hint 1`] = 
       id="authoring.problemeditor.settings.hint.addHintButton"
     />
   </Button>
-</SettingsOption>
+</CollapsibleCard>
 `;

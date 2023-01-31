@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { Form } from '@edx/paragon';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import messages from '../messages';
 import { scoringCardHooks } from '../hooks';
 
@@ -24,7 +24,7 @@ export const ScoringCard = ({
   };
 
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.scoringSettingsTitle)}
       summary={getScoringSummary(scoring.attempts.number, scoring.attempts.unlimited, scoring.weight)}
     >
@@ -53,7 +53,7 @@ export const ScoringCard = ({
           <FormattedMessage {...messages.weightHint} />
         </Form.Control.Feedback>
       </Form.Group>
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 

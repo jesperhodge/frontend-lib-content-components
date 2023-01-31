@@ -2,7 +2,7 @@ import React from 'react';
 import { injectIntl, FormattedMessage, intlShape } from '@edx/frontend-platform/i18n';
 import { Form } from '@edx/paragon';
 import PropTypes from 'prop-types';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import messages from '../messages';
 import { timerCardHooks } from '../hooks';
 
@@ -15,7 +15,7 @@ export const TimerCard = ({
   const { handleChange } = timerCardHooks(updateSettings);
 
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.timerSettingsTitle)}
       summary={intl.formatMessage(messages.timerSummary, { time: timeBetween })}
     >
@@ -32,7 +32,7 @@ export const TimerCard = ({
           floatingLabel={intl.formatMessage(messages.timerInputLabel)}
         />
       </Form.Group>
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 

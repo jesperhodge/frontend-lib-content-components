@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, FormattedMessage, intlShape } from '@edx/frontend-platform/i18n';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import messages from '../messages';
 import { hintsCardHooks, hintsRowHooks } from '../hooks';
 import HintRow from './HintRow';
@@ -15,7 +15,7 @@ export const HintsCard = ({
 }) => {
   const { summary, handleAdd } = hintsCardHooks(hints, updateSettings);
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.hintSettingTitle)}
       summary={intl.formatMessage(summary.message, { ...summary.values })}
       none={!hints.length}
@@ -36,7 +36,7 @@ export const HintsCard = ({
       >
         <FormattedMessage {...messages.addHintButtonText} />
       </Button>
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 

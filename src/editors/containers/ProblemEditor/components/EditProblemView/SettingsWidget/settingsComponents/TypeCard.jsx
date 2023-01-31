@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import { ProblemTypeKeys, ProblemTypes } from '../../../../../../data/constants/problem';
 import messages from '../messages';
 import TypeRow from './TypeRow';
@@ -20,7 +20,7 @@ export const TypeCard = ({
   if (problemType === ProblemTypeKeys.ADVANCED) { return null; }
 
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.typeSettingTitle)}
       summary={ProblemTypes[problemType].title}
     >
@@ -37,7 +37,7 @@ export const TypeCard = ({
           updateAnswer={updateAnswer}
         />
       ))}
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 

@@ -7,7 +7,7 @@ import {
 import { showFullCard } from './hooks';
 import CardSection from './CardSection';
 
-export const SettingsOption = ({
+export const CollapsibleCard = ({
   title, className, extraSections, children, summary, ...passThroughProps
 }) => {
   const { isCardCollapsibleOpen, toggleCardCollapse } = showFullCard();
@@ -45,7 +45,7 @@ export const SettingsOption = ({
     </Card>
   );
 };
-SettingsOption.propTypes = {
+CollapsibleCard.propTypes = {
   title: string.isRequired,
   children: node.isRequired,
   className: string,
@@ -54,9 +54,9 @@ SettingsOption.propTypes = {
     children: node,
   })),
 };
-SettingsOption.defaultProps = {
+CollapsibleCard.defaultProps = {
   className: '',
   extraSections: [],
 };
 
-export default SettingsOption;
+export default CollapsibleCard;

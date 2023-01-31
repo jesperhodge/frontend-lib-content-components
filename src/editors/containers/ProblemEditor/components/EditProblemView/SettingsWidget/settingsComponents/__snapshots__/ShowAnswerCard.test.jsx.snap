@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ShowAnswerCard snapshot snapshot: show answer setting card 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={
     Array [
@@ -140,5 +140,5 @@ exports[`ShowAnswerCard snapshot snapshot: show answer setting card 1`] = `
       </option>
     </Form.Control>
   </Form.Group>
-</SettingsOption>
+</CollapsibleCard>
 `;

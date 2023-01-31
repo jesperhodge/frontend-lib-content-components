@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MatlabCard snapshot snapshot: renders matlab setting card 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   none={false}
@@ -43,11 +43,11 @@ exports[`MatlabCard snapshot snapshot: renders matlab setting card 1`] = `
       value="matlab_api_key"
     />
   </Form.Group>
-</SettingsOption>
+</CollapsibleCard>
 `;
 
 exports[`MatlabCard snapshot snapshot: renders matlab setting card no key 1`] = `
-<SettingsOption
+<CollapsibleCard
   className=""
   extraSections={Array []}
   none={true}
@@ -89,5 +89,5 @@ exports[`MatlabCard snapshot snapshot: renders matlab setting card no key 1`] = 
       value=""
     />
   </Form.Group>
-</SettingsOption>
+</CollapsibleCard>
 `;

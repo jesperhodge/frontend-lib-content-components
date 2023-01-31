@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SettingsOption from './SettingsOption';
+import CollapsibleCard from './CollapsibleCard';
 
-describe('SettingsOption', () => {
+describe('CollapsibleCard', () => {
   describe('default with children', () => {
     const children = (<h1>My test content</h1>);
     test('snapshot: renders correct', () => {
-      expect(shallow(<SettingsOption title="Settings Option Title" summary="Settings Option Summary">{children}</SettingsOption>)).toMatchSnapshot();
+      expect(shallow(<CollapsibleCard title="Settings Option Title" summary="Settings Option Summary">{children}</CollapsibleCard>)).toMatchSnapshot();
     });
   });
   describe('with additional sections', () => {
@@ -14,9 +14,9 @@ describe('SettingsOption', () => {
     const sections = [<h1>Second Section</h1>, <h1>Third Section</h1>];
     test('snapshot: renders correct', () => {
       expect(shallow(
-        <SettingsOption title="Settings Option Title" summary="Settings Option Summary" extraSections={sections}>
+        <CollapsibleCard title="Settings Option Title" summary="Settings Option Summary" extraSections={sections}>
           {children}
-        </SettingsOption>,
+        </CollapsibleCard>,
       )).toMatchSnapshot();
     });
   });

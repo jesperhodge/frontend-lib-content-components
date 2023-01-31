@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage, injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { Button, ButtonGroup, Hyperlink } from '@edx/paragon';
 import PropTypes from 'prop-types';
-import SettingsOption from '../SettingsOption';
+import CollapsibleCard from '../../../../../../sharedComponents/CollapsibleCard';
 import messages from '../messages';
 import { resetCardHooks } from '../hooks';
 
@@ -14,7 +14,7 @@ export const ResetCard = ({
 }) => {
   const { setResetTrue, setResetFalse } = resetCardHooks(updateSettings);
   return (
-    <SettingsOption
+    <CollapsibleCard
       title={intl.formatMessage(messages.resetSettingsTitle)}
       summary={showResetButton
         ? intl.formatMessage(messages.resetSettingsTrue) : intl.formatMessage(messages.resetSettingsFalse)}
@@ -38,7 +38,7 @@ export const ResetCard = ({
           <FormattedMessage {...messages.resetSettingsTrue} />
         </Button>
       </ButtonGroup>
-    </SettingsOption>
+    </CollapsibleCard>
   );
 };
 
