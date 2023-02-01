@@ -20,13 +20,7 @@ export const showAdvancedSettingsCards = () => {
   };
 };
 
-export const useFullCard = () => {
-  const [isCardCollapsibleOpen, setIsCardCollapsibleOpen] = module.state.cardCollapsed(false);
-  return {
-    isCardCollapsibleOpen,
-    toggleCardCollapse: () => setIsCardCollapsibleOpen(!isCardCollapsibleOpen),
-  };
-};
+
 
 export const hintsCardHooks = (hints, updateSettings) => {
   const [summary, setSummary] = module.state.summary({ message: messages.noHintSummary, values: {} });

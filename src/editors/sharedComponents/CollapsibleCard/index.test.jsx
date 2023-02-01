@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CollapsibleCard from './CollapsibleCard';
+import CollapsibleCard from '.';
 
 describe('CollapsibleCard', () => {
   describe('default with children', () => {

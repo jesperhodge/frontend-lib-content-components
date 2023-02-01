@@ -34,58 +34,10 @@ exports[`CollapsibleCard default with children snapshot: renders correct 1`] = `
   </Card.Section>
   <CardSection
     isCardCollapsibleOpen={false}
-    key="settingsOption-Settings Option Title-children"
+    key="CollapsibleCard-Settings Option Title-0"
     none={false}
-    summary="Settings Option Summary"
-  >
-    <h1>
-      My test content
-    </h1>
-  </CardSection>
-</Card>
-`;
-
-exports[`CollapsibleCard render snapshot: renders correct 1`] = `
-<Card
-  className=" CollapsibleCard border border-light-700 shadow-none"
->
-  <Card.Section
-    className="settingsCardTitleSection"
-  >
-    <Advanced
-      onToggle={[Function]}
-      open={false}
-    >
-      <Trigger
-        className="collapsible-trigger d-flex"
-      >
-        <span
-          className="flex-grow-1 text-primary-500 x-small"
-        >
-          Settings Option Title
-        </span>
-        <Visible
-          whenClosed={true}
-        >
-          <Icon />
-        </Visible>
-        <Visible
-          whenOpen={true}
-        >
-          <Icon />
-        </Visible>
-      </Trigger>
-    </Advanced>
-  </Card.Section>
-  <BodySection
-    isCardCollapsibleOpen={false}
-    none={false}
-    summary="Settings Option Summary"
-  >
-    <h1>
-      My test content
-    </h1>
-  </BodySection>
+    summary={null}
+  />
 </Card>
 `;
 
@@ -122,24 +74,18 @@ exports[`CollapsibleCard with additional sections snapshot: renders correct 1`] 
     </Advanced>
   </Card.Section>
   <CardSection
-    isCardCollapsibleOpen={false}
-    key="settingsOption-Settings Option Title-children"
-    none={false}
-    summary="Settings Option Summary"
-  >
-    <h1>
-      First Section
-    </h1>
-  </CardSection>
-  <CardSection
+    extraSections={
+      Array [
+        <h1>
+          Second Section
+        </h1>,
+        <h1>
+          Third Section
+        </h1>,
+      ]
+    }
     isCardCollapsibleOpen={false}
     key="CollapsibleCard-Settings Option Title-0"
-    none={false}
-    summary={null}
-  />
-  <CardSection
-    isCardCollapsibleOpen={false}
-    key="CollapsibleCard-Settings Option Title-1"
     none={false}
     summary={null}
   />
