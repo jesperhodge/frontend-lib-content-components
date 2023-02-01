@@ -38,6 +38,7 @@ export const CollapsibleCard = ({
 
   return (
     <Card className={`${className} CollapsibleCard border border-light-700 shadow-none`}>
+      Text
       {header}
       {content.map((section, index) => (
         <>

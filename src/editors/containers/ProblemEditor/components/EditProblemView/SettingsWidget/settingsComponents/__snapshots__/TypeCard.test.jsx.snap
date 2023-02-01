@@ -3,7 +3,7 @@
 exports[`TypeCard snapshot snapshot: renders type setting card 1`] = `
 <CollapsibleCard
   className=""
-  extraSections={Array []}
+  sections={Array []}
   summary="Text input"
   title="Type"
 >

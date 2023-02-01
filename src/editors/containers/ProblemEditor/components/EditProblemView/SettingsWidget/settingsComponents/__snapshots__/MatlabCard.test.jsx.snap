@@ -3,8 +3,8 @@
 exports[`MatlabCard snapshot snapshot: renders matlab setting card 1`] = `
 <CollapsibleCard
   className=""
-  extraSections={Array []}
   none={false}
+  sections={Array []}
   summary="matlab_api_key"
   title="MATLAB API Key"
 >
@@ -49,8 +49,8 @@ exports[`MatlabCard snapshot snapshot: renders matlab setting card 1`] = `
 exports[`MatlabCard snapshot snapshot: renders matlab setting card no key 1`] = `
 <CollapsibleCard
   className=""
-  extraSections={Array []}
   none={true}
+  sections={Array []}
   summary="None"
   title="MATLAB API Key"
 >

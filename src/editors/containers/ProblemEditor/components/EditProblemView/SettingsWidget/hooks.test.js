@@ -48,18 +48,7 @@ describe('Problem settings hooks', () => {
       expect(state.setState[state.keys.showAdvanced]).toHaveBeenCalledWith(true);
     });
   });
-  describe('Show full card', () => {
-    beforeEach(() => {
-      output = hooks.showFullCard();
-    });
-    test('test default state is false', () => {
-      expect(output.isCardCollapsibleOpen).toBeFalsy();
-    });
-    test('test toggleCardCollapse to true', () => {
-      output.toggleCardCollapse();
-      expect(state.setState[state.keys.cardCollapsed]).toHaveBeenCalledWith(true);
-    });
-  });
+
 
   describe('Hint card hooks', () => {
     test('test useEffect triggers set hints summary no hint', () => {
