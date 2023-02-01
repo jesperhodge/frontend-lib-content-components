@@ -2,9 +2,9 @@ import React from 'react';
 import { Collapsible, Icon, Card } from '@edx/paragon';
 import { KeyboardArrowUp, KeyboardArrowDown } from '@edx/paragon/icons';
 import {
-  arrayOf, shape, string, node, bool,
+  arrayOf, string, node, bool,
 } from 'prop-types';
-import { showFullCard } from '../containers/ProblemEditor/components/EditProblemView/SettingsWidget/hooks';
+import { useFullCard } from '../containers/ProblemEditor/components/EditProblemView/SettingsWidget/hooks';
 
 const CardSection = ({
   children, none, isCardCollapsibleOpen, summary,
@@ -42,10 +42,16 @@ CardSection.defaultProps = {
   summary: null,
 };
 
+/** CollapsibleCard
+ *
+ * You can pass an array of sections to this component, in place of children.
+ * The elements of the sections array will each be rendered in their own CardSection.
+ */
 export const CollapsibleCard = ({
-  title, className, extraSections, children, summary, ...passThroughProps
+  title, className, children, summary, sections, ...passThroughProps
 }) => {
-  const { isCardCollapsibleOpen, toggleCardCollapse } = showFullCard();
+  const { isCardCollapsibleOpen, toggleCardCollapse } = useFullCard();
+  const content = children ? [children, ...sections] : sections;
 
   return (
     <Card className={`${className} CollapsibleCard border border-light-700 shadow-none`}>
@@ -65,10 +71,7 @@ export const CollapsibleCard = ({
           </Collapsible.Trigger>
         </Collapsible.Advanced>
       </Card.Section>
-      <CardSection {...passThroughProps} isCardCollapsibleOpen={isCardCollapsibleOpen} summary={summary} key={`settingsOption-${title}-children`}>
-        {children}
-      </CardSection>
-      {extraSections.map((section, index) => (
+      {content.map((section, index) => (
         <>
           {isCardCollapsibleOpen && <hr />}
           {/* eslint-disable-next-line react/no-array-index-key */}
@@ -82,16 +85,15 @@ export const CollapsibleCard = ({
 };
 CollapsibleCard.propTypes = {
   title: string.isRequired,
-  children: node.isRequired,
+  children: node,
+  sections: arrayOf(node),
   className: string,
   summary: string.isRequired,
-  extraSections: arrayOf(shape({
-    children: node,
-  })),
 };
 CollapsibleCard.defaultProps = {
   className: '',
-  extraSections: [],
+  children: null,
+  sections: [],
 };
 
 export default CollapsibleCard;

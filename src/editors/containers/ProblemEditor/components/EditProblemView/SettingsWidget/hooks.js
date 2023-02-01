@@ -20,7 +20,7 @@ export const showAdvancedSettingsCards = () => {
   };
 };
 
-export const showFullCard = () => {
+export const useFullCard = () => {
   const [isCardCollapsibleOpen, setIsCardCollapsibleOpen] = module.state.cardCollapsed(false);
   return {
     isCardCollapsibleOpen,

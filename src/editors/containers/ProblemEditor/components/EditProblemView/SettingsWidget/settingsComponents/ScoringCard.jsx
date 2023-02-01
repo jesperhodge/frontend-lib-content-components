@@ -28,31 +28,33 @@ export const ScoringCard = ({
       title={intl.formatMessage(messages.scoringSettingsTitle)}
       summary={getScoringSummary(scoring.attempts.number, scoring.attempts.unlimited, scoring.weight)}
     >
-      <Form.Label className="mb-4">
-        <FormattedMessage {...messages.scoringSettingsLabel} />
-      </Form.Label>
-      <Form.Group>
-        <Form.Control
-          type="number"
-          value={scoring.attempts.number}
-          onChange={handleMaxAttemptChange}
-          floatingLabel={intl.formatMessage(messages.scoringAttemptsInputLabel)}
-        />
-        <Form.Control.Feedback>
-          <FormattedMessage {...messages.attemptsHint} />
-        </Form.Control.Feedback>
-      </Form.Group>
-      <Form.Group>
-        <Form.Control
-          type="number"
-          value={scoring.weight}
-          onChange={handleWeightChange}
-          floatingLabel={intl.formatMessage(messages.scoringWeightInputLabel)}
-        />
-        <Form.Control.Feedback>
-          <FormattedMessage {...messages.weightHint} />
-        </Form.Control.Feedback>
-      </Form.Group>
+      <>
+        <Form.Label className="mb-4">
+          <FormattedMessage {...messages.scoringSettingsLabel} />
+        </Form.Label>
+        <Form.Group>
+          <Form.Control
+            type="number"
+            value={scoring.attempts.number}
+            onChange={handleMaxAttemptChange}
+            floatingLabel={intl.formatMessage(messages.scoringAttemptsInputLabel)}
+          />
+          <Form.Control.Feedback>
+            <FormattedMessage {...messages.attemptsHint} />
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group>
+          <Form.Control
+            type="number"
+            value={scoring.weight}
+            onChange={handleWeightChange}
+            floatingLabel={intl.formatMessage(messages.scoringWeightInputLabel)}
+          />
+          <Form.Control.Feedback>
+            <FormattedMessage {...messages.weightHint} />
+          </Form.Control.Feedback>
+        </Form.Group>
+      </>
     </CollapsibleCard>
   );
 };

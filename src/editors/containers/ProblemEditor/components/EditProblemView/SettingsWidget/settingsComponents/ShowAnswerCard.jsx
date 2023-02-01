@@ -89,10 +89,8 @@ export const ShowAnswerCard = ({
     <CollapsibleCard
       title={intl.formatMessage(messages.showAnswerSettingsTitle)}
       summary={intl.formatMessage(ShowAnswerTypes[showAnswer.on])}
-      extraSections={[{ children: explanationSection }]}
-    >
-      {[showAnswerSection, explanationSection]}
-    </CollapsibleCard>
+      sections={[showAnswerSection, explanationSection]}
+    />
   );
 };
 
