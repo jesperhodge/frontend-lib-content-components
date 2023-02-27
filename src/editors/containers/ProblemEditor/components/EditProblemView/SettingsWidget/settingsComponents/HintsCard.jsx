@@ -20,6 +20,7 @@ export const HintsCard = ({
   if (problemType === ProblemTypeKeys.ADVANCED) { return null; }
 
   return (
+    <div>
     <SettingsOption
       title={intl.formatMessage(messages.hintSettingTitle)}
       summary={intl.formatMessage(summary.message, { ...summary.values })}
@@ -42,6 +43,7 @@ export const HintsCard = ({
         <FormattedMessage {...messages.addHintButtonText} />
       </Button>
     </SettingsOption>
+    </div>
   );
 };
 
