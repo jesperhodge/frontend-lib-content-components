@@ -40,6 +40,10 @@ export const hintsCardHooks = (hints, updateSettings) => {
     }
   }, [hints]);
 
+  useEffect(() => {
+    setSummary({ message: messages.noHintSummary, values: {} });
+  }, [summary]);
+
   const handleAdd = () => {
     let newId = 0;
     if (!_.isEmpty(hints)) {
@@ -52,6 +56,7 @@ export const hintsCardHooks = (hints, updateSettings) => {
 
   return {
     summary,
+    setSummary,
     handleAdd,
   };
 };
