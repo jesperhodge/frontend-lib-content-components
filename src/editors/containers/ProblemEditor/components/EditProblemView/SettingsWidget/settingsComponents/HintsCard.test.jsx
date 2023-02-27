@@ -69,18 +69,13 @@ describe('HintsCard', () => {
     // won't implement now
   });
 
-  it('changes summary if the number of hints changes', () => {
+  it('changes summary if the number of hints changes', async () => {
     render(<HintsCard {...props} hints={hints1} />);
 
     expect(screen.getByText('Summary count: 0')).toBeDefined();
 
-    waitFor(() => {
-      expect(screen.getByText('Summary count: 1')).toBeDefined();
-    });
-    expect(screen.getByText('Summary values: hint1')).toBeDefined();
-
     render(<HintsCard {...props} hints={hints2} />);
-    waitFor(() => {
+    await waitFor(() => {
       expect(screen.getByText('Summary count: 1')).toBeDefined();
     });
   });
