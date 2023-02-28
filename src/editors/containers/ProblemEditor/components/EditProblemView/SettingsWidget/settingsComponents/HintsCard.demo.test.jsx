@@ -1,3 +1,4 @@
+import { render, fireEvent, screen } from '@testing-library/react';
 import React from 'react';
 import { formatMessage } from '../../../../../../../testUtils';
 import { ProblemTypeKeys } from '../../../../../../data/constants/problem';
@@ -16,6 +17,10 @@ jest.mock('./HintRow', () => jest.fn(({ value }) => (
 
 jest.mock('../../../../../../sharedComponents/Button', () => jest.fn(({ children, onClick }) => (
   <button type="button" onClick={onClick}>{children}</button>
+)));
+
+jest.mock('../SettingsOption', () => jest.fn(({ children }) => (
+  <div>{children}</div>
 )));
 
 describe('HintsCard', () => {

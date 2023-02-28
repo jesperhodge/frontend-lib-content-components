@@ -41,11 +41,11 @@ export const HintsCard = ({
       >
         <FormattedMessage {...messages.addHintButtonText} />
       </Button>
-      {/* <div>
+      <div>
         <h5>Summary</h5>
         <p>Summary values: {summary?.values?.hint}</p>
         <p>Summary count: {summary?.values?.count}</p>
-      </div> */}
+      </div>
     </SettingsOption>
   );
 };
