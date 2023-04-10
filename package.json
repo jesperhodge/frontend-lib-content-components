@@ -68,6 +68,7 @@
     "codemirror": "^6.0.0",
     "fast-xml-parser": "^4.0.10",
     "lodash-es": "^4.17.21",
+    "openedx-studio-component-library": "github:jesperhodge/hackathon-studio-component-library",
     "react-redux": "^7.2.8",
     "react-responsive": "8.2.0",
     "react-transition-group": "4.4.2",

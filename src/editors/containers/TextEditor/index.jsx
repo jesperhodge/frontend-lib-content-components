@@ -17,6 +17,7 @@ import * as hooks from './hooks';
 import messages from './messages';
 import TinyMceWidget from '../../sharedComponents/TinyMceWidget';
 import { prepareEditorRef } from '../../sharedComponents/TinyMceWidget/hooks';
+import { Modal } from 'openedx-studio-component-library';
 
 export const TextEditor = ({
   onClose,
@@ -65,6 +66,8 @@ export const TextEditor = ({
         <Toast show={blockFailed} onClose={hooks.nullMethod}>
           <FormattedMessage {...messages.couldNotLoadTextContext} />
         </Toast>
+
+        <Modal isOpen />
 
         {(!assetsFinished)
           ? (
